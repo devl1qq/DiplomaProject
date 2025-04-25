@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMT</RootNamespace>
+    <AssemblyName>SMT</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>24.106.0018</FileVersion>
+    <InformationalVersion>24.106.0018</InformationalVersion>
+    <Copyright>Copyright © 2005-2024 Acumatica, Inc. All rights reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Label, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\Label.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common.Std, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Common.Std.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.CS.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.CS.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.DbServices, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.DbServices.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects.AM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\PX.Objects.AM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\acumatica\SMTUAT\Bin\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AllSubAccountSelectorAttribute.cs" />
+    <Compile Include="Attributes\DiscrepancyTypeSeverityAttribute.cs" />
+    <Compile Include="DAC\AMClockTranExt.cs" />
+    <Compile Include="DAC\AMEstimateItemStandaloneExt.cs" />
+    <Compile Include="DAC\AMEstimateItemExt.cs" />
+    <Compile Include="DAC\AMProdItemExt.cs" />
+    <Compile Include="DAC\ArcEstimateAndSalesQuote.cs" />
+    <Compile Include="DAC\ArcOrderRating.cs" />
+    <Compile Include="DAC\ArcVendorScoreReason.cs" />
+    <Compile Include="DAC\ArcWorkflowType.cs" />
+    <Compile Include="DAC\ArcCreateNC.cs" />
+    <Compile Include="DAC\ArcDisposition.cs" />
+    <Compile Include="DAC\ArcResolution.cs" />
+    <Compile Include="DAC\ArcDiscrepancyType.cs" />
+    <Compile Include="DAC\ArcSOPODetails.cs" />
+    <Compile Include="DAC\ARPaymentExt.cs" />
+    <Compile Include="DAC\CarrierExt.cs" />
+    <Compile Include="DAC\ContactExt.cs" />
+    <Compile Include="DAC\CRCaseExt.cs" />
+    <Compile Include="DAC\CustSalesPeopleExt.cs" />
+    <Compile Include="DAC\EPEmployeeExt.cs" />
+    <Compile Include="DAC\SalesPersonExt.cs" />
+    <Compile Include="DAC\SalesTerritoryExt.cs" />
+    <Compile Include="DAC\AMBomOperExt.cs" />
+    <Compile Include="DAC\AMProdOperExt.cs" />
+    <Compile Include="DAC\AMEstimateOperExt.cs" />
+    <Compile Include="DAC\ArcAMWCLocations.cs" />
+    <Compile Include="DAC\ArcFlowDownNotes.cs" />
+    <Compile Include="DAC\ArcSalesTargets.cs" />
+    <Compile Include="DAC\ArcSector.cs" />
+    <Compile Include="DAC\ArcPONotes.cs" />
+    <Compile Include="DAC\ArcComponentBodyType.cs" />
+    <Compile Include="DAC\ArcVendorScore.cs" />
+    <Compile Include="DAC\CountryExt.cs" />
+    <Compile Include="DAC\CROpportunityStandaloneExt.cs" />
+    <Compile Include="DAC\CROpportunityExt.cs" />
+    <Compile Include="DAC\CROpportunityProductsExt.cs" />
+    <Compile Include="DAC\BAccountExt.cs" />
+    <Compile Include="DAC\CRQuoteStandaloneExt.cs" />
+    <Compile Include="DAC\CRQuoteExt.cs" />
+    <Compile Include="DAC\OrganizationExt.cs" />
+    <Compile Include="DAC\SOLineSplitExt.cs" />
+    <Compile Include="DAC\SOShipmentExt.cs" />
+    <Compile Include="DAC\SOOrderExt.cs" />
+    <Compile Include="DAC\POOrderExt.cs" />
+    <Compile Include="DAC\CustomerExt.cs" />
+    <Compile Include="DAC\SupplyPOLineExt.cs" />
+    <Compile Include="DAC\VendorExt.cs" />
+    <Compile Include="DAC\SOLineExt.cs" />
+    <Compile Include="DAC\POLineExt.cs" />
+    <Compile Include="DAC\InventoryItemExt.cs" />
+    <Compile Include="Graph\ArcOrderRatingMaint.cs" />
+    <Compile Include="Graph\ArcVendorScoreReasonMaint.cs" />
+    <Compile Include="Graph\ArcWorkflowTypesMaint.cs" />
+    <Compile Include="Graph\ArcResolutionMaint.cs" />
+    <Compile Include="Graph\ArcDepositionMaint.cs" />
+    <Compile Include="Graph\ArcDiscrepancyTypeMaint.cs" />
+    <Compile Include="Graph\ArcSalesTargetsMaint.cs" />
+    <Compile Include="Graph\BusinessAccountMaintExt.cs" />
+    <Compile Include="Graph\CRCaseMaintExt.cs" />
+    <Compile Include="DAC\POLineSplitForm.cs" />
+    <Compile Include="Graph\CREmailActivityMaintExt.cs" />
+    <Compile Include="Graph\CustomerMaintExt.cs" />
+    <Compile Include="Graph\EstimateMaintExt.cs" />
+    <Compile Include="Graph\InventoryItemMaintExt.cs" />
+    <Compile Include="Graph\OUSearchMaintExt.cs" />
+    <Compile Include="Graph\POCreateExt.cs" />
+    <Compile Include="Graph\POLinkDialogExt.cs" />
+    <Compile Include="Graph\POReceiptEntryExt.cs" />
+    <Compile Include="Graph\WCMaintExt.cs" />
+    <Compile Include="Graph\ArcPONotesMaint.cs" />
+    <Compile Include="Graph\ArcVendorScoreMaint.cs" />
+    <Compile Include="Graph\ArcSectorMaint.cs" />
+    <Compile Include="Graph\ArcFlowDownNotesMaint.cs" />
+    <Compile Include="Graph\OpportunityMaintExt.cs" />
+    <Compile Include="Graph\QuoteMaintExt.cs" />
+    <Compile Include="Graph\SOShipmentEntryExt.cs" />
+    <Compile Include="Graph\SOOrderEntryExt.cs" />
+    <Compile Include="Graph\POOrderEntryExt.cs" />
+    <Compile Include="Graph\ProdMaintExt.cs" />
+    <Compile Include="Graph\VendorMaintExt.cs" />
+    <Compile Include="Graph\ArcComponentBodyTypeMaint.cs" />
+    <Compile Include="Helper\Constants.cs" />
+    <Compile Include="Helper\CRSiteStatusFilter.cs" />
+    <Compile Include="Helper\CRSiteStatusLookup.cs" />
+    <Compile Include="Helper\CRSiteStatusSelected.cs" />
+    <Compile Include="Helper\PrintZplLabelHelperExtendedEntities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
