@@ -57,3 +57,8 @@ These include utility classes and shared logic used across different modules. Th
      4. - MainERPProject
     
   Publishing in this sequence ensures all dependencies and features are correctly loaded.
+
+  To enter deployed version of project go to: https://local.arcus-universe.com:921/CourseWork
+  creds:
+   login: admin
+   pass: 123456
